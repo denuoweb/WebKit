@@ -25,9 +25,15 @@
 
 #include <glib-object.h>
 
+#if defined(__cplusplus)
+extern "C" {
+#endif
 #define GST_USE_UNSTABLE_API
 #include <gst/webrtc/webrtc.h>
 #undef GST_USE_UNSTABLE_API
+#if defined(__cplusplus)
+}
+#endif
 
 #include <wtf/Forward.h>
 #include <wtf/glib/GThreadSafeWeakPtr.h>
