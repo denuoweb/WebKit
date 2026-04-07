@@ -32,9 +32,15 @@
 #include <wtf/glib/GUniquePtr.h>
 
 #if defined(BUILDING_WebCore) && USE(GSTREAMER_WEBRTC)
+#if defined(__cplusplus)
+extern "C" {
+#endif
 #define GST_USE_UNSTABLE_API
 #include <gst/webrtc/webrtc.h>
 #undef GST_USE_UNSTABLE_API
+#if defined(__cplusplus)
+}
+#endif
 #endif
 
 namespace WTF {
@@ -63,4 +69,3 @@ WTF_DEFINE_GPTR_DELETER(GstWebRTCICECandidatePair, gst_webrtc_ice_candidate_pair
 }
 
 #endif // USE(GSTREAMER)
-
