@@ -32,6 +32,7 @@
 #include "ScriptExecutionContext.h"
 #include "SharedMemory.h"
 #include "SocketProvider.h"
+#include <gst/webrtc/webrtc.h>
 #include <wtf/HashSet.h>
 #include <wtf/Markable.h>
 #include <wtf/MonotonicTime.h>
